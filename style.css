@@ -1,0 +1,260 @@
+body {
+    margin: 0 0 0 0;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 0px 1px 0px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.coachmanPanel {
+    grid-area: coachman;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1px 2px 2px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coachmanContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coachmanPortrait {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+}
+
+.coachmanStat {
+    width: 100%;
+}
+
+.charactersList {
+    min-height: 40px;
+    grid-area: charList;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1px 2px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.characterSelectionCard {
+    min-width: 75px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.characterName {
+    margin: 0px 5px 0px 5px;
+}
+
+.chatacterPortrait {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin: 0 2px 0 2px;
+}
+
+.characterPanel {
+    grid-area: character;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.characterPanelContainerInfos {
+    display: flex;
+    align-items: center;
+}
+
+.characterBigPortrait {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 0 10px 0 10px;
+}
+
+.characterPanelContainerStats {
+    display: flex;
+}
+
+.characterStatsLabels {
+    margin : 0px 10px 0px 10px;
+}
+
+.characterStatsValue {}
+
+.characterPanelContainerSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skillsHeader {
+    font-weight: bold;
+    text-align: center;
+}
+
+.skillCard {
+    display: flex;
+    align-items: center;
+    margin: 2px 0 2px 0;
+}
+
+.skillPicture {
+    min-width: 25px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    margin: 0 2px 0px 5px;
+}
+
+.skillName {
+    min-width: 30%;
+    width: 30%;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.skillDescription {}
+
+.characterInventory {
+    grid-area: charInvent;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 2px 2px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    ".          head    ."
+    "leftHand   torso   rightHand"
+    ".          shoes   .";
+}
+
+/*    CHARACTER INVENTORY GRID    */
+.characterHead {
+    grid-area: head;
+}
+
+.characterLeftHand {
+    grid-area: leftHand;
+}
+
+.characterTorso {
+    grid-area: torso;
+}
+
+.characterRightHand {
+    grid-area: rightHand;
+}
+
+.characterShoes {
+    grid-area: shoes;
+}
+
+.characterInventorySpot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px 0 5px;
+}
+
+.bodyPart {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.itemGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: 5px;
+    overflow: auto;
+}
+
+.item {
+    height: 30px;
+    min-width: 150px;
+    max-width: 150px;
+    border: 1px solid black;
+    margin: 2px 2px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.itemImage {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    border: 1px solid black;
+    margin: 0 2px 0 2px;
+}
+
+.itemName {
+    margin-right: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.selecteEquipedPanel {
+    grid-area: selectedEquipped;
+    background-color: purple;
+}
+.coachTrinkets {
+    grid-area: coachTrink;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2px 2px 0 0;
+}
+.inventoryPanel {
+    grid-area: inventory;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2px 2px 0 2px;
+}
+.selectedInventoryPanel {
+    grid-area: selectedInventory;
+    background-color: blue;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr 25%;
+    grid-template-rows: 10% 10% 1fr 30%;
+    grid-template-areas:
+    "header     header      header      header"
+    "coachman   charList    charList    charList"
+    "coachman   character   charInvent  selectedEquipped"
+    "coachTrink inventory   inventory   selectedInventory";
+}
