@@ -147,7 +147,7 @@ body {
     grid-area: charInvent;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 0 2px 2px 0;
+    margin: 0 1px 2px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -227,23 +227,57 @@ body {
 
 .selecteEquipedPanel {
     grid-area: selectedEquipped;
-    background-color: purple;
+    margin: 0 0 2px 1px;
 }
+
 .coachTrinkets {
     grid-area: coachTrink;
     border: 1px solid black;
     border-radius: 10px;
     margin: 2px 2px 0 0;
 }
+
 .inventoryPanel {
     grid-area: inventory;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 2px 2px 0 2px;
+    margin: 2px 1px 0 2px;
 }
+
 .selectedInventoryPanel {
     grid-area: selectedInventory;
-    background-color: blue;
+    margin: 2px 0px 0 1px;
+}
+
+.selectedItem {
+    overflow: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.itemPortraitContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemPortrait {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    border: 1px solid black;
+}
+
+.itemStats {
+    display: flex;
+    justify-content: center;
+}
+
+.itemStatsLabels {
+    margin: 0 10px 0 0;
 }
 
 .container {
