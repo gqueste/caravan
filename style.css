@@ -68,6 +68,24 @@ body {
     border: 1px solid black;
     display: flex;
     align-items: center;
+    background-color: white;
+    transition: transform 0.2s ease-out;
+}
+
+.characterSelectionCard:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.selected {
+    border: thick double black;
+    font-weight: bold;
+}
+
+.selected .characterSelectionArrow {
+    border-top: 10px solid transparent;
+	border-left: 20px solid black;
+	border-bottom: 10px solid transparent;
 }
 
 .characterName {
@@ -78,7 +96,7 @@ body {
     width: 25px;
     height: 25px;
     border: 1px solid black;
-    margin: 10 2 10 2;
+    margin: 10 5 10 5;
 }
 
 .characterSelectionArrowContainer {
@@ -91,7 +109,7 @@ body {
     width: 0;
 	height: 0;
 	border-top: 10px solid transparent;
-	border-left: 20px solid black;
+	border-left: 20px solid grey;
 	border-bottom: 10px solid transparent;
     margin-right: 20px;
 }
@@ -150,7 +168,7 @@ body {
     height: 25px;
     width: 25px;
     border: 1px solid black;
-    margin: 0 2px 0px 5px;
+    margin: 0 5 0 5;
 }
 
 .skillName {
@@ -220,7 +238,6 @@ body {
 }
 
 .item {
-    height: 30px;
     min-width: 150px;
     max-width: 150px;
     border: 1px solid black;
@@ -234,7 +251,7 @@ body {
     height: 25px;
     min-width: 25px;
     border: 1px solid black;
-    margin: 0 2px 0 2px;
+    margin: 5 5 5 5;
 }
 
 .itemName {
