@@ -18,49 +18,40 @@ body {
     margin-left: 5px;
 }
 
-.coachmanPanel {
-    grid-area: coachman;
+.coachmanContainer {
+    display: flex;
+    align-items: center;
+}
+
+.coachmanPortrait {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.coachmanStats {
+    display: flex;
+    justify-content: center;
+}
+
+.coachmanStats div {
+    margin: 0 10 0 10;
+}
+
+/* CHARACTERS LIST */
+.charactersList {
+    grid-area: charList;
     border: 1px solid black;
     border-radius: 10px;
     margin: 1px 2px 2px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.coachmanContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.coachmanPortrait {
-    width: 75px;
-    height: 75px;
-    border: 1px solid black;
-}
-
-.coachmanStat {
-    width: 100%;
-}
-
-.charactersList {
-    min-height: 40px;
-    grid-area: charList;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 1px 2px 0px 0px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .characterSelectionCard {
-    min-width: 75px;
-    height: 40px;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -70,11 +61,26 @@ body {
     margin: 0px 5px 0px 5px;
 }
 
-.chatacterPortrait {
+.characterPortrait {
     width: 25px;
     height: 25px;
     border: 1px solid black;
-    margin: 0 2px 0 2px;
+    margin: 10 2 10 2;
+}
+
+.characterSelectionArrowContainer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.characterSelectionArrow {
+    width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid black;
+	border-bottom: 10px solid transparent;
+    margin-right: 20px;
 }
 
 .characterPanel {
@@ -285,10 +291,9 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 20% 1fr 1fr 25%;
-    grid-template-rows: 10% 10% 1fr 30%;
+    grid-template-rows: 10% 1fr 1fr;
     grid-template-areas:
     "header     header      header      header"
-    "coachman   charList    charList    charList"
-    "coachman   character   charInvent  selectedEquipped"
+    "charList   character   charInvent  selectedEquipped"
     "coachTrink inventory   inventory   selectedInventory";
 }
