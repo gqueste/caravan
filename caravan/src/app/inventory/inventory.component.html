@@ -17,30 +17,9 @@
         </div>
     </div>
     <div class="charactersList">
-        <div class="characterSelectionCard selected">
+        <div class="characterSelectionCard" [ngClass]="character.selected ? 'selected' : ''" *ngFor="let character of characters" (click)="onSelectCharacter(character)">
             <div class="characterPortrait"></div>
-            <div class="characterName">Character Name</div>
-            <div class="characterSelectionArrowContainer">
-                <div class="characterSelectionArrow"></div>
-            </div>
-        </div>
-        <div class="characterSelectionCard">
-            <div class="characterPortrait"></div>
-            <div class="characterName">Character Name</div>
-            <div class="characterSelectionArrowContainer">
-                <div class="characterSelectionArrow"></div>
-            </div>
-        </div>
-        <div class="characterSelectionCard">
-            <div class="characterPortrait"></div>
-            <div class="characterName">Character Name</div>
-            <div class="characterSelectionArrowContainer">
-                <div class="characterSelectionArrow"></div>
-            </div>
-        </div>
-        <div class="characterSelectionCard">
-            <div class="characterPortrait"></div>
-            <div class="characterName">Character Name</div>
+            <div class="characterName">{{ character.name }}</div>
             <div class="characterSelectionArrowContainer">
                 <div class="characterSelectionArrow"></div>
             </div>
@@ -50,7 +29,7 @@
         <div class="characterPanelContainerInfos">
             <div class="characterBigPortrait"></div>
             <div>
-                <div>Character Name</div>
+                <div>{{ selectedCharacter.name }}</div>
                 <div>Character Profession</div>
                 <div>HP 60 / 60</div>
                 <div>NRJ 10 / 50</div>
@@ -88,31 +67,31 @@
         </div>
     </div>
     <div class="characterInventory">
-        <div class="characterInventorySpot characterHead">
+        <div class="characterInventorySpot characterHead" [ngClass]="selectedBodyPart === 'head' ? 'selectedBodyPart' : ''" (click)="onSelectItem('head')">
             <div class="bodyPart"></div>
-            <div>Helmet</div>
+            <div>{{ selectedCharacter.head.name }}</div>
         </div>
-        <div class="characterInventorySpot characterLeftHand">
+        <div class="characterInventorySpot characterLeftHand" [ngClass]="selectedBodyPart === 'leftHand' ? 'selectedBodyPart' : ''" (click)="onSelectItem('leftHand')">
             <div class="bodyPart"></div>
-            <div>Shield</div>
+            <div>{{ selectedCharacter.leftHand.name }}</div>
         </div>
-        <div class="characterInventorySpot characterTorso">
+        <div class="characterInventorySpot characterTorso" [ngClass]="selectedBodyPart === 'torso' ? 'selectedBodyPart' : ''" (click)="onSelectItem('torso')">
             <div class="bodyPart"></div>
-            <div>Armor</div>
+            <div>{{ selectedCharacter.torso.name }}</div>
         </div>
-        <div class="characterInventorySpot characterRightHand">
+        <div class="characterInventorySpot characterRightHand" [ngClass]="selectedBodyPart === 'rightHand' ? 'selectedBodyPart' : ''" (click)="onSelectItem('rightHand')">
             <div class="bodyPart"></div>
-            <div>Sword</div>
+            <div>{{ selectedCharacter.rightHand.name }}</div>
         </div>
-        <div class="characterInventorySpot characterShoes">
+        <div class="characterInventorySpot characterShoes" [ngClass]="selectedBodyPart === 'legs' ? 'selectedBodyPart' : ''" (click)="onSelectItem('legs')">
             <div class="bodyPart"></div>
-            <div>Boots</div>
+            <div>{{ selectedCharacter.legs.name }}</div>
         </div>
     </div>
     <div class="selectedItem selecteEquipedPanel">
         <div class="itemPortraitContainer">
             <div class="itemPortrait"></div>
-            <div class="itemFullName">Item Full Name</div>
+            <div class="itemFullName">{{ selectedCharacter[selectedBodyPart].name }}</div>
         </div>
         <div class="itemStats">
             <div class="itemStatsLabels">
