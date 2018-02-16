@@ -1,51 +1,5 @@
-.header {
+header-root {
     grid-area: header;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 2px 0px 1px 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    "headerNav     headerTitle      headerCoach      headerStats";
-}
-
-.navigation {
-    grid-area: headerNav;
-    display: flex;
-    align-items: center;
-}
-
-.title {
-    grid-area: headerTitle;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.coachmanContainer {
-    grid-area: headerCoach;
-    display: flex;
-    align-items: center;
-}
-
-.coachmanPortrait {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    margin-right: 10px;
-}
-
-.coachmanStats {
-    grid-area: headerStats;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.coachmanStats div {
-    margin: 0px 10px 0px 10px;
 }
 
 /* CHARACTERS LIST */
