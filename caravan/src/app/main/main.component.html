@@ -1,1 +1,6 @@
-<inventory-root></inventory-root>
+<div class="screen">
+    <header-root></header-root>
+    <div class="contentScreen">
+        <inventory-root *ngIf="currentScreen === 'INVENTORY'"></inventory-root>
+    </div>
+</div>

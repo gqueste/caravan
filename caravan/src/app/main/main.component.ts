@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from '../services/Navigation';
 
 @Component({
   selector: 'main-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
+
+    currentScreen;
+
+    constructor(private navigationService: NavigationService) {}
+
+    ngOnInit() {
+        this.navigationService.currentScreen
+            .subscribe(screen => this.currentScreen = screen);
+    }
 
 }

@@ -1,0 +1,18 @@
+.screen {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas:
+    "header"
+    "mainDisplay";
+}
+
+header-root {
+    grid-area: header;
+    margin: 0px 0px 5px 0px;
+}
+
+.contentScreen {
+    grid-area: mainDisplay;
+}

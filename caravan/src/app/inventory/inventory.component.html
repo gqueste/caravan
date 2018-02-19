@@ -1,7 +1,6 @@
 
 <div class="container">
-    <header-root></header-root>
-    <div class="charactersList">
+    <div class="panel charactersList">
         <div class="characterSelectionCard" [ngClass]="character.selected ? 'selected' : ''" *ngFor="let character of characters" (click)="onSelectCharacter(character)">
             <div class="characterPortrait"></div>
             <div class="characterName">{{ character.name }}</div>
@@ -10,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="characterPanel">
+    <div class="panel characterPanel">
         <div class="characterPanelContainerInfos">
             <div class="characterBigPortrait"></div>
             <div>
@@ -51,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="characterInventory">
+    <div class="panel characterInventory">
         <div class="characterInventorySpot characterHead" [ngClass]="selectedBodyPart === 'head' ? 'selectedBodyPart' : ''" (click)="onSelectItem('head')">
             <div class="bodyPart"></div>
             <div>{{ selectedCharacter.head.name }}</div>
@@ -73,7 +72,7 @@
             <div>{{ selectedCharacter.legs.name }}</div>
         </div>
     </div>
-    <div class="selectedItem selecteEquipedPanel">
+    <div class="panel selectedItem selecteEquipedPanel">
         <div class="itemPortraitContainer">
             <div class="itemPortrait"></div>
             <div class="itemFullName">{{ selectedCharacter[selectedBodyPart].name }}</div>
@@ -98,7 +97,7 @@
             </div>
         </div>
     </div>
-    <div class="itemGrid coachTrinkets">
+    <div class="panel itemGrid coachTrinkets">
         <div class="item">
             <div class="itemImage"></div>
             <div class="itemName">Item name</div>
@@ -164,7 +163,7 @@
             <div class="itemName">Item name</div>
         </div>
     </div>
-    <div class="itemGrid inventoryPanel">
+    <div class="panel itemGrid inventoryPanel">
         <div class="item">
             <div class="itemImage"></div>
             <div class="itemName">Item name</div>
@@ -206,7 +205,7 @@
             <div class="itemName">Item name</div>
         </div>
     </div>
-    <div class="selectedItem selectedInventoryPanel">
+    <div class="panel selectedItem selectedInventoryPanel">
         <div class="itemPortraitContainer">
             <div class="itemPortrait"></div>
             <div class="itemFullName">Item Full Name</div>
