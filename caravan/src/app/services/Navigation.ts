@@ -4,12 +4,18 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
 export class NavigationService {
 
-    private screenSource = new BehaviorSubject<string>("coucou");
+    SCREENS = {
+        'INVENTORY': 'inventory',
+        'FIGHT': 'fight',
+        'EVENT': 'event'
+    };
+
+    private screenSource = new BehaviorSubject<string>(this.SCREENS.INVENTORY);
     currentScreen = this.screenSource.asObservable();
 
     constructor() { }
 
-    setCurrentScreen(screen: string) {
+    setCurrentScreen(screen: string): void {
         this.screenSource.next(screen);
     }
 

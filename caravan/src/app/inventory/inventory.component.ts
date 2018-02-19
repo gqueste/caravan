@@ -85,10 +85,15 @@ export class InventoryComponent {
             }
         }
     ];
-    selectedCharacter = this.characters[0];
-    selectedBodyPart = `head`;
+    selectedCharacter;
+    selectedBodyPart;
 
-    onSelectCharacter(character) {
+    ngOnInit(): void {
+        this.selectedCharacter = this.characters[0];
+        this.selectedBodyPart = `head`;
+    }
+
+    onSelectCharacter(character): void {
         this.characters.forEach(char => {
             char.selected = false;
         });
@@ -96,7 +101,7 @@ export class InventoryComponent {
         this.selectedCharacter = character;
     }
 
-    onSelectItem(bodyPart) {
+    onSelectItem(bodyPart: string): void {
         this.selectedBodyPart = bodyPart;
     }
 

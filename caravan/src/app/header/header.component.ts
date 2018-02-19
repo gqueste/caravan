@@ -10,7 +10,15 @@ export class HeaderComponent {
 
     constructor(private navigationService: NavigationService){ }
 
-    clickOnInventoryButton() {
-        this.navigationService.setCurrentScreen("INVENTORY");
+    clickOnInventoryButton(): void {
+        this.navigationService.setCurrentScreen(this.navigationService.SCREENS.INVENTORY);
+    }
+
+    clickOnFightButton() {
+        this.navigationService.setCurrentScreen(this.navigationService.SCREENS.FIGHT);
+    }
+
+    clickOnEventButton() {
+        this.navigationService.setCurrentScreen(this.navigationService.SCREENS.EVENT);
     }
 }

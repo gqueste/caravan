@@ -17,4 +17,8 @@ export class MainComponent {
             .subscribe(screen => this.currentScreen = screen);
     }
 
+    isScreenInventory(): boolean {
+        return this.currentScreen === this.navigationService.SCREENS.INVENTORY;
+    }
+
 }
