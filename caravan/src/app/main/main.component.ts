@@ -21,4 +21,8 @@ export class MainComponent {
         return this.currentScreen === this.navigationService.SCREENS.INVENTORY;
     }
 
+    isEventInventory(): boolean {
+        return this.currentScreen === this.navigationService.SCREENS.EVENT;
+    }
+
 }

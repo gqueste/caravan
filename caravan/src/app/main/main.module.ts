@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MainComponent } from './main.component';
 import { InventoryComponent } from '../inventory/inventory.component';
 import { HeaderComponent } from '../header/header.component';
+import { EventComponent } from '../event/event.component';
 
 import { NavigationService } from '../services/Navigation';
 
@@ -12,7 +13,8 @@ import { NavigationService } from '../services/Navigation';
   declarations: [
     MainComponent,
     InventoryComponent,
-    HeaderComponent
+    HeaderComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule
