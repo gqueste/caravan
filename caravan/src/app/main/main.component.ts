@@ -25,4 +25,8 @@ export class MainComponent {
         return this.currentScreen === this.navigationService.SCREENS.EVENT;
     }
 
+    isFightInventory(): boolean {
+        return this.currentScreen === this.navigationService.SCREENS.FIGHT;
+    }
+
 }

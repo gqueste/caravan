@@ -10,7 +10,7 @@ export class NavigationService {
         'EVENT': 'event'
     };
 
-    private screenSource = new BehaviorSubject<string>(this.SCREENS.EVENT);
+    private screenSource = new BehaviorSubject<string>(this.SCREENS.FIGHT);
     currentScreen = this.screenSource.asObservable();
 
     constructor() { }

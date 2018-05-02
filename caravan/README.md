@@ -1,5 +1,5 @@
 # TODO
-* Move header to not be included in the Inventory Component
+* Continue Fight screen
 
 # Caravan
 
